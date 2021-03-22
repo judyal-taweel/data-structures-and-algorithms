@@ -108,7 +108,9 @@ console.log(a) prints [1, 2, 3, 4]
 
 const append = (arr1, arr2) => {
   // Solution code here...
-  arr1.push(arr2);
+  arr1.forEach(element,index =>{
+    arr2.push(arr1[index]);
+  })
 
 };
 
