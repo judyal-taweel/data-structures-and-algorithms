@@ -56,11 +56,18 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
-  charArray.sort((a,b)=> a.children.length - b.children.length);
-  if(a.children.length = b.children.length){
-    charArray.house.sort();
-  }
-return charArray;
+  charArray.sort((a,b)=>{
+    if ((a.children.length-b.children.length)< 0) {
+      return -1;
+    }
+    if ((a.children.length-b.children.length)>0) {
+      return 1;
+    }
+    else if ((a.house-b.house)>0){
+      return 1;
+    }
+   });
+    return charArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -142,8 +149,11 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  
+  arr.forEach(item => {
+    houses.push(item.house);
+  });
   return houses;
+
 };
 
 /*------------------------------------------------------------------------------------------------
