@@ -57,8 +57,8 @@ let characters = [
 const sortByChildren = (charArray) => {
   // Solution code here...
   charArray.sort((a,b)=> a.children.length - b.children.length);
-  if(a = b){
-    charArray.house.sort()
+  if(a.children.length = b.children.length){
+    charArray.house.sort();
   }
 return charArray;
 };
@@ -77,10 +77,10 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getCourseKeys = (obj) => {
   // Solution code here...
-  let arr = ['name', 'duration', 'topics','finalExam'];
-  arr.array.forEach(element => {
-    return element;
-  });
+  const keyObj= Object.keys(obj);
+  return keyObj;
+
+
 
 
 };
@@ -95,6 +95,13 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
+  const keyObj= Object.values(obj);
+  if (keyObj.includes(value)) {
+    return true;  
+  }
+  else{
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,6 +125,10 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
+  const arr =[];
+  arr.push(obj);
+  return arr;
+  
 };
 
 
@@ -131,6 +142,7 @@ Write a function named getHouses that returns a new array containing the names o
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
+  
   return houses;
 };
 
