@@ -8,6 +8,18 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
 // Solution code here...
+if(arr.length === 0){
+  return -1;
+}else{
+  let longStr = arr[0].length;
+  let index = 0;
+  for(let i=1 ;i<arr.length; i++){
+    if(longStr < arr[i].length){
+      index = i;
+    }
+  }
+  return index;
+}
 };
   
 /* ------------------------------------------------------------------------------------------------
@@ -20,6 +32,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  return arr.map(str => str.charAt(0));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +46,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  return arr.filter(str=> str.includes(':)'));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +60,12 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+    arr.map(num => {
+    let str = '';
+    str = num.substring(1,4) + num.substring(6,9) + num.substring(10,15);
+    return str;
+  });
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,6 +78,8 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  return str.split('').reduce((a,val,i)=> (i%2)? a+=val: a,'')
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,6 +90,8 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  return arr.every(str => str.includes(':)'));
+
 };
 
 /* ------------------------------------------------------------------------------------------------
