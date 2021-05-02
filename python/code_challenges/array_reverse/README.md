@@ -6,4 +6,4 @@ in my challenge I have list from 1 to 5 and I used list name and in () I wrote t
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ## Solution
-![array_reverse](./python/code_challenges/assets/reverseList.PNG)
+![array_reverse](/reverseList.PNG)
