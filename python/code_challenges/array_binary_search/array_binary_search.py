@@ -15,5 +15,3 @@ def binarysearch(list,num):
         
             return -1        
     
-
-
